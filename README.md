@@ -7,7 +7,7 @@ Example usage:
 mod prime_factorization;
 
 fn main() {
-    let input: u64 = 7;
+    let input: u64 = 223092870;
     let prime_vec: Vec<u64> = prime_factorization::collect_prime_factors (input);
 
     if prime_vec.len() > 0 {
@@ -29,5 +29,5 @@ fn main() {
     }
 }
 
-// The prime factors of 340510170 are: 2, 3, 5, 7, 11, 13, 17, 23, 29
+The prime factors of 223092870 are: 2, 3, 5, 7, 11, 13, 17, 19, 23
 ```
