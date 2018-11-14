@@ -1,5 +1,5 @@
 # prime_factorization
-A small Rust module that calculates the prime factorization of a given number
+A small Rust module that calculates the prime factors of a given number.
 
 Example usage:
 
