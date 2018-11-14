@@ -15,12 +15,12 @@ fn main() {
 
         for x in 0..prime_vec.len() {
             if x < prime_vec.len() - 1 {
-               print! ("{}, ", prime_vec[x]);
+                print! ("{}, ", prime_vec[x]);
             }
 
             else {
-              println! ("{}", prime_vec[x]);
-             }
+                println! ("{}", prime_vec[x]);
+            }
         }   
     }
 
@@ -29,5 +29,5 @@ fn main() {
     }
 }
 
-The prime factors of 223092870 are: 2, 3, 5, 7, 11, 13, 17, 19, 23
+// The prime factors of 223092870 are: 2, 3, 5, 7, 11, 13, 17, 19, 23
 ```
