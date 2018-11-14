@@ -21,7 +21,9 @@ pub fn collect_prime_factors (input: u64) -> Vec<u64> {
         first_factor = get_first_factor (next_value);
     }
 
-    prime_vec.push (next_value);
+    if prime_vec.len() > 0 {
+        prime_vec.push (next_value);
+    }
 
     return prime_vec;
 }
