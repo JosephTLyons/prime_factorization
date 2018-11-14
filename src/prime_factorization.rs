@@ -1,4 +1,3 @@
-// This is a help function for print_prime_factors, do not call it directly
 fn get_first_factor (input: u64) -> u64 {
     let upper_limit: u64 = (input as f64).sqrt() as u64;
 
