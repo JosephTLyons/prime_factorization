@@ -10,19 +10,18 @@ fn get_first_factor (input: u64) -> u64 {
     return 0;
 }
 
-pub fn collect_prime_factors (input: u64) -> Vec<u64> {
+pub fn collect_prime_factors (mut input: u64) -> Vec<u64> {
     let mut prime_vec: Vec<u64> = Vec::new();
-    let mut next_value: u64 = input;
     let mut first_factor: u64 = get_first_factor (input);
 
     while first_factor != 0 {
         prime_vec.push (first_factor);
-        next_value /= first_factor;
-        first_factor = get_first_factor (next_value);
+        input /= first_factor;
+        first_factor = get_first_factor (input);
     }
 
     if prime_vec.len() > 0 {
-        prime_vec.push (next_value);
+        prime_vec.push (input);
     }
 
     return prime_vec;
