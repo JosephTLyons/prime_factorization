@@ -7,19 +7,25 @@ Example usage:
 mod prime_factorization;
 
 fn main() {
-    let input: u64 = 340510170;
+    let input: u64 = 7;
     let prime_vec: Vec<u64> = prime_factorization::collect_prime_factors (input);
 
-    print! ("The prime factors of {} are: ", input);
+    if prime_vec.len() > 0 {
+        print! ("The prime factors of {} are: ", input);
 
-    for x in 0..prime_vec.len() {
-        if x < prime_vec.len() - 1 {
-            print! ("{}, ", prime_vec[x]);
-        }
+        for x in 0..prime_vec.len() {
+            if x < prime_vec.len() - 1 {
+               print! ("{}, ", prime_vec[x]);
+            }
 
-        else {
-            println! ("{}", prime_vec[x]);
-        }
+            else {
+              println! ("{}", prime_vec[x]);
+             }
+        }   
+    }
+
+    else {
+        println! ("{} is prime.", input);
     }
 }
 
