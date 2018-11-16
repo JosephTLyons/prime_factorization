@@ -34,6 +34,6 @@ fn main() {
 }
 
 // Input and output
-// ./prime_factorization 6023507490
-// The prime factors of 6023507490 are: 2, 3, 3, 3, 3, 5, 7, 11, 13, 17, 19, 23
+// ./prime_factorization 6469693230
+// The prime factors of 6469693230 are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29
 ```
