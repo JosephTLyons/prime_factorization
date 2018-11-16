@@ -18,14 +18,14 @@ fn main() {
         print! ("The prime factors of {} are: ", input);
 
         for x in 0..prime_vec.len() {
-            if x < prime_vec.len() - 1 {
-                print! ("{}, ", prime_vec[x]);
+            print! ("{}", prime_vec[x]);
+            
+            if x != prime_vec.len() - 1 {
+                print!(", ");
             }
+        }
 
-            else {
-                println! ("{}", prime_vec[x]);
-            }
-        }   
+        println!();  
     }
 
     else {
