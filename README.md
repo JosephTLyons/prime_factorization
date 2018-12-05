@@ -19,7 +19,7 @@ fn main() {
 
         for x in 0..prime_vec.len() {
             print! ("{}", prime_vec[x]);
-            
+
             if x != prime_vec.len() - 1 {
                 print!(", ");
             }
