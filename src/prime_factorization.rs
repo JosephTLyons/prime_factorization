@@ -18,7 +18,7 @@ pub fn collect_prime_factors (mut input: u64) -> Vec<u64> {
 fn get_first_factor (input: u64) -> u64 {
     let upper_limit: u64 = (input as f64).sqrt() as u64;
 
-    for possible_factor in 2..upper_limit + 1 {
+    for possible_factor in 2..=upper_limit {
         if input % possible_factor == 0 {
             return possible_factor;
         }
