@@ -14,7 +14,7 @@ fn main() {
     let input: u64 = args[1].parse::<u64>().unwrap();
     let prime_vec: Vec<u64> = prime_factorization::collect_prime_factors (input);
 
-    if prime_vec.len() > 0 {
+    if ! prime_vec.is_empty() {
         print! ("The prime factors of {} are: ", input);
 
         for x in 0..prime_vec.len() {

@@ -8,7 +8,7 @@ pub fn collect_prime_factors (mut input: u64) -> Vec<u64> {
         first_factor = get_first_factor (input);
     }
 
-    if prime_vec.len() > 0 {
+    if ! prime_vec.is_empty() {
         prime_vec.push (input);
     }
 
