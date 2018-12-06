@@ -21,11 +21,11 @@ fn main() {
             print! ("{}", prime_vec[x]);
 
             if x != prime_vec.len() - 1 {
-                print!(", ");
+                print! (", ");
             }
         }
 
-        println!();  
+        println!();
     }
 
     else {
