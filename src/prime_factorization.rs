@@ -12,7 +12,7 @@ pub fn collect_prime_factors (mut input: u64) -> Vec<u64> {
         prime_vec.push (input);
     }
 
-    return prime_vec;
+    prime_vec
 }
 
 fn get_first_factor (input: u64) -> u64 {
@@ -24,5 +24,5 @@ fn get_first_factor (input: u64) -> u64 {
         }
     }
 
-    return 0;
+    0
 }
