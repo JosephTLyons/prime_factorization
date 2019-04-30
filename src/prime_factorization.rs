@@ -26,3 +26,33 @@ fn get_first_factor (input: u64) -> u64 {
 
     0
 }
+
+#[cfg(test)]
+mod tests {
+    use super::collect_prime_factors;
+
+    #[test]
+    fn test_1() {
+        assert_eq!(0, collect_prime_factors(1).len());
+    }
+
+    #[test]
+    fn test_4() {
+        assert_eq!(vec![2, 2], collect_prime_factors(4));
+    }
+
+    #[test]
+    fn test_10() {
+        assert_eq!(vec![2, 5], collect_prime_factors(10));
+    }
+
+    #[test]
+    fn test_100() {
+        assert_eq!(vec![2, 2, 5, 5], collect_prime_factors(100));
+    }
+
+    #[test]
+    fn test_1024() {
+        assert_eq!(vec![2, 2, 2, 2, 2, 2, 2, 2, 2, 2], collect_prime_factors(1024));
+    }
+}
