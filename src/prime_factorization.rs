@@ -33,17 +33,17 @@ mod tests {
 
     // Test some small and large prime numbers
     #[test]
-    fn test_1() {
+    fn test_0001() {
         assert_eq!(0, collect_prime_factors(1).len());
     }
 
     #[test]
-    fn test_2() {
+    fn test_0002() {
         assert_eq!(0, collect_prime_factors(2).len());
     }
 
     #[test]
-    fn test_3() {
+    fn test_0003() {
         assert_eq!(0, collect_prime_factors(3).len());
     }
 
@@ -54,17 +54,17 @@ mod tests {
 
     // Test some typical non-prime numbers
     #[test]
-    fn test_4() {
+    fn test_0004() {
         assert_eq!(vec![2, 2], collect_prime_factors(4));
     }
 
     #[test]
-    fn test_10() {
+    fn test_0010() {
         assert_eq!(vec![2, 5], collect_prime_factors(10));
     }
 
     #[test]
-    fn test_100() {
+    fn test_0100() {
         assert_eq!(vec![2, 2, 5, 5], collect_prime_factors(100));
     }
 
