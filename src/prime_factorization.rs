@@ -70,6 +70,6 @@ mod tests {
 
     #[test]
     fn test_1024() {
-        assert_eq!(vec![2, 2, 2, 2, 2, 2, 2, 2, 2, 2], collect_prime_factors(1024));
+        assert_eq!(vec![2; 10], collect_prime_factors(1024));
     }
 }
