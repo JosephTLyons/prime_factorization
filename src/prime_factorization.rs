@@ -43,6 +43,11 @@ mod tests {
     }
 
     #[test]
+    fn test_3() {
+        assert_eq!(0, collect_prime_factors(3).len());
+    }
+
+    #[test]
     fn test_large_prime() {
         assert_eq!(0, collect_prime_factors(982_451_653).len());
     }
