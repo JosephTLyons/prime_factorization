@@ -12,24 +12,22 @@ use std::env;
 fn main() {
     let args: Vec<String> = env::args().collect();
     let input: u64 = args[1].parse::<u64>().unwrap();
-    let prime_vec: Vec<u64> = prime_factorization::collect_prime_factors (input);
+    let prime_vec: Vec<u64> = prime_factorization::get_prime_factors(input);
 
-    if ! prime_vec.is_empty() {
-        print! ("The prime factors of {} are: ", input);
+    if !prime_vec.is_empty() {
+        print!("The prime factors of {} are: ", input);
 
-        for x in 0..prime_vec.len() {
-            print! ("{}", prime_vec[x]);
+        for (i, prime) in prime_vec.iter().enumerate() {
+            print!("{}", prime);
 
-            if x != prime_vec.len() - 1 {
-                print! (", ");
+            if i != prime_vec.len() - 1 {
+                print!(", ");
             }
         }
 
         println!();
-    }
-
-    else {
-        println! ("{} is prime.", input);
+    } else {
+        println!("{} is prime.", input);
     }
 }
 
