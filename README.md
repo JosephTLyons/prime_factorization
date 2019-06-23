@@ -4,7 +4,7 @@ A small Rust module that calculates the prime factors of a given number.
 This is an example of how the module can be used in a program:
 
 ```rust
-// This program takes a command line argument in and produces the prime factors of that number
+// This program takes in a command line argument and produces the prime factors of that number
 
 mod prime_factorization;
 use std::env;
