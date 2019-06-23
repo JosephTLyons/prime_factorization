@@ -11,8 +11,11 @@ mod prime_factorization;
 use std::env;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let input: u64 = args[1].parse::<u64>().unwrap();
+    let input: u64 = env::args()
+        .nth(1)
+        .expect("No integer given as second command line argument.")
+        .parse::<u64>()
+        .expect("Couldn't parse String to u64.");
     let prime_vec: Vec<u64> = prime_factorization::get_prime_factors(input);
 
     if !prime_vec.is_empty() {
