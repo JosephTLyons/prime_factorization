@@ -11,15 +11,24 @@ mod prime_factorization;
 use std::env;
 
 fn main() {
-    let input: u64 = env::args()
-        .nth(1)
-        .expect("No integer given as second command line argument.")
-        .parse::<u64>()
-        .expect("Couldn't parse String to u64.");
-    let prime_vec: Vec<u64> = prime_factorization::get_prime_factors(input);
+    let user_input: u64 = match env::args().nth(1) {
+        Some(string_value) => match string_value.parse::<u64>() {
+            Ok(value) => value,
+            Err(_) => {
+                println!("Couldn't parse `String` to `u64`.");
+                return;
+            }
+        },
+        None => {
+            println!("No integer given as second command line argument.");
+            return;
+        }
+    };
+
+    let prime_vec: Vec<u64> = prime_factorization::get_prime_factors(user_input);
 
     if !prime_vec.is_empty() {
-        print!("The prime factors of {} are: ", input);
+        print!("The prime factors of {} are: ", user_input);
 
         for (i, prime) in prime_vec.iter().enumerate() {
             print!("{}", prime);
@@ -31,9 +40,10 @@ fn main() {
 
         println!();
     } else {
-        println!("{} is prime.", input);
+        println!("{} is prime.", user_input);
     }
 }
+
 
 // Input and output
 // ./prime_factorization 6469693230
