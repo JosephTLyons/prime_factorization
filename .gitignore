@@ -1,3 +1,4 @@
-main.rs
-/target
+.DS_Store
 **/*.rs.bk
+/target
+main.rs
